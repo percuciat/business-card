@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +9,100 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: calc(17px + (22 - 17) * ((100vw - 320px) / (1170 - 320)));
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+li,ul,button,figure,p,h1,h2,h4{
+  padding: 0;
+  margin: 0;
+}
+li{
+  list-style: none;
+}
+button{
+  border: none;
+  outline: var(--light-grey);
+  cursor: pointer;
+}
+
+.button{
+  color: red;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrapper{
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  background: #fff;
+}
+.wrapper-home{
+  margin: 20px 0 55px;
+  display: flex;
+}
+.wrapper-home__intro{
+  flex: 1 1 100%;
+  display: grid;
+  row-gap: 10px;
+}
+.wrapper-home__img{
+  flex: 1 1 50%;
+  display: grid;
+  place-items: center;
+}
+.wrapper.dark{
+  background: #282c34;
+}
+
+.home__list{
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+}
+
+.home__list-link{
+  color: var(--color-black);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.container{
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: auto;
+}
+
+/*animation: App-logo-spin 20s linear infinite;*/
+
+@keyframes App-logo-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+
+@media screen and (max-width: 1300px) {
+  .container{
+    max-width: 950px;
+  }
+}
+
+@media screen and (max-width: 1090px) {
+  .container{
+    max-width: 750px;
+  }
+}
+@media screen and (max-width: 567px) {
+  .home__list{
+    display: grid;
+    row-gap: 10px;
+    grid-row-gap: 10px;
+  }
 }

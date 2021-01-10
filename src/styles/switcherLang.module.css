@@ -1,0 +1,89 @@
+
+.switcher {
+	margin-right: 20px;
+	position: relative;
+	height: 100%;
+	display: block;
+	composes: greyColor from "./variables.css";
+	background: none;
+}
+
+.switcherDark{
+	border: 2px solid transparent;
+	border-image: linear-gradient(to bottom, #a1005e 0%, #800080 100%);
+	border-image-slice: 1;
+}
+
+.switcherLight{
+	border: 2px solid var(--color-black);
+}
+
+.wrapper{
+	background: transparent;
+}
+
+.flagLight{
+	background: var(--white);
+}
+
+.flagDark{
+	background: var(--color-black);
+}
+
+.flag {
+	display: block;
+	left: 0;
+	top: 0;
+	position: relative;
+	width: 100px;
+	height: 44px;
+	z-index: 2;
+	line-height: 40px;
+	font-weight: 700;
+	transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	cursor: pointer;
+}
+
+.flag:after {
+	content: "RU";
+	width: 50px;
+	height: 44px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	color: var(--color-black);
+	background: var(--light-grey);
+	transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	cursor: pointer;
+}
+
+
+.active {
+	left: 0;
+}
+
+.active::after {
+	left: 50px;
+	content: "EN";
+	color: var(--color-black);
+	background: linear-gradient(to bottom, #a1005e 0%, #800080 100%);
+}
+
+@media screen and (max-width: 567px) {
+	.flag {
+		width: 70px;
+		height: 30px;
+	}
+	.flag:after {
+		width: 35px;
+		height: 30px;
+		top: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.active::after {
+		left: 36px;
+	}
+}
