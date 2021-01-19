@@ -6,8 +6,11 @@ type DescriptionComponentProps = {
     lang: boolean
 }
 
-const firstSentRu = 'Я Семенов Максим, фронтенд разработчик.';
-const firstSentEng = 'I\'m Maxim Semyonov, front-end developer.';
+const firstSentRu = 'Привет! Я Максим, frontend-разработчик. Мне нравится создавать полезные проекты, изучать' +
+    ' новые подходы и технологии в разработке, а также совершенствовать изученное и опробованное. ';
+const firstSentEng = 'I\'m Max, front-end developer. I\'m passionate about creating useful projects,' +
+    ' exploring new approaches and technologies in development,' +
+    ' as well as improving what has been learned and tested.';
 const ruCv = 'Скачать резюме';
 const engCv = 'Download CV';
 
@@ -20,27 +23,13 @@ const Description: React.FC<DescriptionComponentProps> = React.memo(({lang}) => 
             <li>
                 <span className={styles.boldTExt}>
                     {
-                        lang ? 'Основной стек технологий:' : 'Main stack:'
-                    }
-                </span> React / Redux.
+                        lang ? 'Технологии с которыми работал:' : 'Stack:'
+                    } </span> React / Redux, GatsbyJS, Git.
             </li>
-            <li>
-                <span className={styles.boldTExt}>
-                    {
-                        lang ? 'Дополнительный стек:' : 'Additional stack:'
-                    } </span> GatsbyJS, Wordpress, Git.
-            </li>
-            <li>
-                <span className={styles.boldTExt}>
-                    {
-                        lang ? 'Опыт разработки:' : 'Development experience:'
-                    }
-                </span>
-                {
-                    lang ? ' более 2 лет.' : ' over 2 years.'
-                }
-            </li>
-            <a href="#" className={styles.link} target="_blank">{ lang ? ruCv : engCv }</a>
+            <a href={ lang ? "/resume.pdf" : "/resumeEng.pdf" }
+               className={styles.link}
+               rel="noreferrer"
+               target="_blank">{ lang ? ruCv : engCv }</a>
         </ul>
     </>
 });

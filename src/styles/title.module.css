@@ -1,7 +1,8 @@
 .glitch {
 	position: relative;
 	display: block;
-	font-size: 78px;
+	font-size: 70px;
+	line-height: 75px;
 	color: var(--color-black);
 	mix-blend-mode: multiply;
 }
@@ -47,11 +48,13 @@
 @media screen and (max-width: 767px) {
 	.glitch {
 		font-size: 64px;
+		line-height: 68px;
 	}
 }
 
 @media screen and (max-width: 500px) {
 	.glitch {
 		font-size: 47px;
+		line-height: 50px;
 	}
 }

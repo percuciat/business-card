@@ -2,10 +2,15 @@ import React, { useContext } from 'react';
 import Title from "../components/Title";
 import Description from "../components/Description";
 import Electron from "../components/Electron";
-import Canvas from "../components/Canvas";
+
 import { ContextApp } from "../stateManager/store";
 
-type DrawComponentProps = {
+
+
+const Home: React.FC = () => {
+    /*import Canvas from "../components/Canvas";
+
+    type DrawComponentProps = {
     ctx: any;
     fillStyle: string;
     beginPath(): object;
@@ -17,8 +22,6 @@ type DrawComponentProps = {
     clearRect(...numberArray: number[]): number
 }
 
-const Home: React.FC = () => {
-
     const draw = (ctx: DrawComponentProps, frameC: number ) => {
         ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
         ctx.fillStyle = '#000000';
@@ -26,7 +29,8 @@ const Home: React.FC = () => {
         ctx.arc(50, 100, 20*Math.sin(frameC*0.05)**2, 0, 2*Math.PI);
         ctx.fill();
     };
-
+     {<Canvas draw={draw}/>}
+*/
     const width = window.matchMedia("(min-width: 767px)");
 
     const {state: {isRu, isLight}} = useContext(ContextApp);
@@ -38,9 +42,9 @@ const Home: React.FC = () => {
                 <Description lang={isRu}/>
                 <ul className="home__list">
                     <li className="home__list-item">
-                        <a href="https://web-semenov.netlify.app/" className="home__list-link" title="Blog" target="_blank" rel="noreferrer">
+                        <a href="https://maksim-semenov.ru/" className="home__list-link" title="Blog" target="_blank" rel="noreferrer">
                             {
-                                isRu ? 'Мой блог' : 'My blog'
+                                isRu ? 'Портфолио' : 'Portfolio'
                             }
                         </a>
                     </li>
@@ -58,7 +62,6 @@ const Home: React.FC = () => {
                         : <></>
             }
         </div>
-        {/*<Canvas draw={draw}/>*/}
     </>
 };
 

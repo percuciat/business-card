@@ -7,23 +7,14 @@ type TitleComponentProps = {
 
 const Title: React.FC<TitleComponentProps> = React.memo(({lang}) => {
 
-    const ru = 'Привет!';
-    const eng = 'Hello!';
-
     return <>
         <div className={styles.glitch}>
             <span className={styles.first}>
-                {
-                    lang ? ru : eng
-                }
+               Maksim Semenov
             </span>
-            {
-                lang ? ru : eng
-            }
+            Maksim Semenov
             <span className={styles.second}>
-                  {
-                      lang ? ru : eng
-                  }
+                 Maksim Semenov
             </span>
         </div>
     </>
