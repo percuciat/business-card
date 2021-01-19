@@ -53,7 +53,7 @@ const Footer: React.FC = React.memo(() => {
                     </svg>
                     </a></li>
                 </ul>
-                <h4 className={`${isLight ? styles.darkTitle : ''} ${styles.title}`}>copyright © 2018-2021<span> web-semenov </span> all rights reserved
+                <h4 className={`${isLight ? styles.darkTitle : ''} ${styles.title}`}>copyright © 2018-2021<span> maksim-semenov </span> all rights reserved
                 </h4>
             </div>
         </footer>
