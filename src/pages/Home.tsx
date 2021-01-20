@@ -31,7 +31,15 @@ const Home: React.FC = () => {
     };
      {<Canvas draw={draw}/>}
 */
-    const width = window.matchMedia("(min-width: 767px)");
+    const [width, setWidth] = React.useState(false);
+    React.useEffect(() => {
+        const width = window.matchMedia("(max-width: 767px)");
+        if (width.matches) {
+            setWidth(true)
+        }
+
+    }, []);
+
 
     const {state: {isRu, isLight}} = useContext(ContextApp);
 
@@ -42,14 +50,18 @@ const Home: React.FC = () => {
                 <Description lang={isRu}/>
                 <ul className="home__list">
                     <li className="home__list-item">
-                        <a href="https://maksim-semenov.ru/" className="home__list-link" title="Blog" target="_blank" rel="noreferrer">
+                        <a href="https://blog.maksim-semenov.ru/" className="home__list-link" title="Blog" target="_blank" rel="noreferrer">
                             {
                                 isRu ? 'Портфолио' : 'Portfolio'
                             }
                         </a>
                     </li>
                     <li className="home__list-item">
-                        <a href="https://www.codewars.com/users/percuciat" className="home__list-link" target="_blank" rel="noopener noreferrer" title="CodeWars">CodeWars</a>
+                        <a href="https://www.codewars.com/users/percuciat"
+                           className="home__list-link"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           title="CodeWars">CodeWars</a>
                     </li>
                     <li className="home__list-item">
                         <a href="mailto:zerob.rob@yandex.ru" className="home__list-link" title="E-mail">E-mail</a>
@@ -57,9 +69,7 @@ const Home: React.FC = () => {
                 </ul>
             </div>
             {
-                    width.matches
-                        ? <Electron theme={isLight}/>
-                        : <></>
+                    !width && <Electron theme={isLight}/>
             }
         </div>
     </>
