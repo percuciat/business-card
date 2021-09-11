@@ -1,6 +1,6 @@
-import React, {useContext, useCallback} from "react";
-import {ContextApp} from "../stateManager/store";
-import {setWindowSize} from "../stateManager/actions";
+import React, {useContext, useCallback} from 'react';
+import {ContextApp} from '../stateManager/store';
+import {setWindowSize} from '../stateManager/actions';
 
 export const useResizeWindow = () => {
     const {dispatch} = useContext(ContextApp);
