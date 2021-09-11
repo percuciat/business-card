@@ -25,10 +25,12 @@ export const Description: React.FC<DescriptionComponentProps> = React.memo(({lan
                         lang ? 'Технологии с которыми работал:' : 'Stack:'
                     } </span> React / Redux, GatsbyJS, Git.
             </li>
-            <a href={ lang ? "/resume.pdf" : "/resumeEng.pdf" }
-               className={styles.link}
-               rel="noreferrer"
-               target="_blank">{ lang ? ruCv : engCv }</a>
+            <li>
+                <a href={ lang ? "/resume.pdf" : "/resumeEng.pdf" }
+                   className={styles.link}
+                   rel="noreferrer"
+                   target="_blank">{ lang ? ruCv : engCv }</a>
+            </li>
         </ul>
     </>
 });
