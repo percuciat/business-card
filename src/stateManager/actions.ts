@@ -1,4 +1,4 @@
-import { CHANGE_THEME, CHANGE_LANG } from './types';
+import { CHANGE_THEME, CHANGE_LANG, SET_WINDOW_SIZE } from './types';
 
 export function changeTheme(value: boolean) {
     return {
@@ -13,3 +13,12 @@ export function changeLang(value: boolean) {
         payload: value,
     };
 }
+
+export function setWindowSize(value: number) {
+    return {
+        type: SET_WINDOW_SIZE,
+        payload: value
+    }
+}
+
+

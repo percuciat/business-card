@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import styles from "../styles/switcherLang.module.css";
-import { ContextApp } from "../stateManager/store";
-import { changeLang } from '../stateManager/actions';
+import styles from './switcherLang.module.css';
+import { ContextApp } from '../../stateManager/store';
+import { changeLang } from '../../stateManager/actions';
 
 const SwitcherLang: React.FC = () => {
     const {state: {isRu, isLight}, dispatch} = useContext(ContextApp);

@@ -1,48 +1,14 @@
 import React, { useContext } from 'react';
-import Title from "../components/Title";
-import Description from "../components/Description";
-import Electron from "../components/Electron";
-
-import { ContextApp } from "../stateManager/store";
-
+import { Title, Description, Electron } from '../components/';
+import { ContextApp } from '../stateManager/store';
+import {useResizeWindow} from '../hooks/useResizeWindow';
+import {checkMedia} from '../utils/checkMedia';
+import {TABLET_MEDIA} from '../const';
 
 
 const Home: React.FC = () => {
-    /*import Canvas from "../components/Canvas";
-
-    type DrawComponentProps = {
-    ctx: any;
-    fillStyle: string;
-    beginPath(): object;
-    arc(...numberArray: number[]): number;
-    fill(): object;
-    width : number | string;
-    height : number | string;
-    canvas: any;
-    clearRect(...numberArray: number[]): number
-}
-
-    const draw = (ctx: DrawComponentProps, frameC: number ) => {
-        ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-        ctx.fillStyle = '#000000';
-        ctx.beginPath();
-        ctx.arc(50, 100, 20*Math.sin(frameC*0.05)**2, 0, 2*Math.PI);
-        ctx.fill();
-    };
-     {<Canvas draw={draw}/>}
-*/
-    const [width, setWidth] = React.useState(false);
-    React.useEffect(() => {
-        const width = window.matchMedia("(max-width: 767px)");
-        if (width.matches) {
-            setWidth(true)
-        }
-
-    }, []);
-
-
-    const {state: {isRu, isLight}} = useContext(ContextApp);
-
+    const {state: {isRu, isLight, width}} = useContext(ContextApp);
+    useResizeWindow();
     return <>
         <div className="wrapper-home">
             <div className="wrapper-home__intro">
@@ -69,7 +35,7 @@ const Home: React.FC = () => {
                 </ul>
             </div>
             {
-                    !width && <Electron theme={isLight}/>
+                checkMedia(width, TABLET_MEDIA.name) && <Electron theme={isLight}/>
             }
         </div>
     </>

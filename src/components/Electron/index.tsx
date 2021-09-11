@@ -1,12 +1,12 @@
 import React from 'react';
-import styles from "../styles/electron.module.css";
+import styles from './electron.module.css';
 
 
 export interface AtomComponentProps {
     theme: boolean
 }
 
-const Electron: React.FC<AtomComponentProps> = React.memo(({theme}) => {
+export const Electron: React.FC<AtomComponentProps> = React.memo(({theme}) => {
     return (
         <div className={styles.wrapper}>
             <div className={styles.atom}>
@@ -24,6 +24,3 @@ const Electron: React.FC<AtomComponentProps> = React.memo(({theme}) => {
         </div>
     );
 });
-
-
-export default Electron;

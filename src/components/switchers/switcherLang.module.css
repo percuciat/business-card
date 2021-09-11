@@ -4,7 +4,7 @@
 	position: relative;
 	height: 100%;
 	display: block;
-	composes: greyColor from "./variables.css";
+	composes: greyColor from "../../styles/variables.css";
 	background: none;
 }
 

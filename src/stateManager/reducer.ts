@@ -1,4 +1,4 @@
-import { CHANGE_THEME, CHANGE_LANG } from './types';
+import { CHANGE_THEME, CHANGE_LANG, SET_WINDOW_SIZE } from './types';
 
 export const changeReducer = (state: any, action: { type: string; payload: boolean; })  => {
     switch(action.type) {
@@ -11,6 +11,11 @@ export const changeReducer = (state: any, action: { type: string; payload: boole
             return {
                 ...state,
                 isLight: action.payload
+            };
+        case SET_WINDOW_SIZE:
+            return {
+                ...state,
+                width: action.payload
             };
         default:
             return state

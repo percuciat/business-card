@@ -1,12 +1,12 @@
 import React from 'react';
-import styles from "../styles/title.module.css";
+import styles from './title.module.css';
 
 type TitleComponentProps = {
     lang: boolean
 }
 
-const Title: React.FC<TitleComponentProps> = React.memo(({lang}) => {
 
+export const Title: React.FC<TitleComponentProps> = () => {
     return <>
         <div className={styles.glitch}>
             <span className={styles.first}>
@@ -18,7 +18,4 @@ const Title: React.FC<TitleComponentProps> = React.memo(({lang}) => {
             </span>
         </div>
     </>
-});
-
-
-export default Title;
+};

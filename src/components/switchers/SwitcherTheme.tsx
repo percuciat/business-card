@@ -1,8 +1,7 @@
-import React, {useContext} from 'react';
-import styles from '../styles/switcherTheme.module.css';
-
-import { ContextApp } from "../stateManager/store";
-import {changeTheme} from "../stateManager/actions";
+import React, { useContext } from 'react';
+import styles from './switcherTheme.module.css';
+import { ContextApp } from '../../stateManager/store';
+import { changeTheme } from '../../stateManager/actions';
 
 
 const SwitcherTheme: React.FC = () => {

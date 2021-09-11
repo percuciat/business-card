@@ -1,9 +1,9 @@
-import Header from "./Header";
-import Footer from "./Footer";
-import Description from "./Description";
-import SwitcherLang from "./SwitcherLang";
-import SwitcherTheme from "./SwitcherTheme";
-import Title from "./Title";
+import { Header } from './Header';
+import { Footer } from './Footer';
+import { Description } from './Description';
+import {SwitcherLang, SwitcherTheme} from './switchers';
+import { Title } from './Title';
+import { Electron } from './Electron';
 
 
 export {
@@ -13,4 +13,5 @@ export {
     SwitcherLang,
     SwitcherTheme,
     Title,
+    Electron
 }

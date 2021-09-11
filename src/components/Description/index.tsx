@@ -1,6 +1,5 @@
 import React from 'react';
-import styles from "../styles/description.module.css";
-
+import styles from './description.module.css';
 
 type DescriptionComponentProps = {
     lang: boolean
@@ -14,7 +13,7 @@ const firstSentEng = 'I\'m Max, front-end developer. I\'m passionate about creat
 const ruCv = 'Скачать резюме';
 const engCv = 'Download CV';
 
-const Description: React.FC<DescriptionComponentProps> = React.memo(({lang}) => {
+export const Description: React.FC<DescriptionComponentProps> = React.memo(({lang}) => {
     return <>
         <ul className={styles.text}>
             <li>
@@ -34,5 +33,3 @@ const Description: React.FC<DescriptionComponentProps> = React.memo(({lang}) => 
     </>
 });
 
-
-export default Description;
