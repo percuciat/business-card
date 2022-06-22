@@ -1,10 +1,10 @@
-.text{
-	display: grid;
-	row-gap: 8px;
+.text {
+  display: grid;
+  row-gap: 8px;
 }
-.link{
-	text-decoration: underline;
+.link {
+  text-decoration: underline;
 }
-.boldTExt{
-	font-weight: bold;
+.boldTExt {
+  font-weight: bold;
 }

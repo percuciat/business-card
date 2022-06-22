@@ -1,21 +1,20 @@
-
 :root {
-	--color-grey: slategray;
-	--color-black: #222;
-	--light-grey: #ddd;
-	--white: #fff;
-	--green: #8ce196;
-	--blue: #00CCFF;
+  --color-grey: slategray;
+  --color-black: #222;
+  --light-grey: #ddd;
+  --white: #fff;
+  --green: #8ce196;
+  --blue: #00ccff;
 }
 
 .blackColor {
-	color: #222;
+  color: #222;
 }
 
 .greyColor {
-	 color: #708090;
- }
+  color: #708090;
+}
 
 .greyLight {
-	color: #ddd;
+  color: #ddd;
 }

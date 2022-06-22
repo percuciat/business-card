@@ -1,21 +1,18 @@
-import React from 'react';
-import styles from './title.module.css';
+import React from "react";
+import styles from "./Title.module.css";
 
 type TitleComponentProps = {
-    lang: boolean
-}
-
+  lang: boolean;
+};
 
 export const Title: React.FC<TitleComponentProps> = () => {
-    return <>
-        <div className={styles.glitch}>
-            <span className={styles.first}>
-               Maksim Semenov
-            </span>
-            Maksim Semenov
-            <span className={styles.second}>
-                 Maksim Semenov
-            </span>
-        </div>
+  return (
+    <>
+      <div className={styles.glitch}>
+        <span className={styles.first}>Maksim Semenov</span>
+        Maksim Semenov
+        <span className={styles.second}>Maksim Semenov</span>
+      </div>
     </>
+  );
 };
